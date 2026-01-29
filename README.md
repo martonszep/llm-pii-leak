@@ -1,7 +1,8 @@
 # Unintended Memorization of Sensitive Information in Fine-Tuned Language Models
+**Accepted to EACL 2026**
 
 This repository contains the official implementation for the paper **"Unintended Memorization of Sensitive Information in Fine-Tuned Language Models"**.
-**Accepted to EACL 2026**
+
 ### TL;DR
 We analyze how fine-tuned LLMs unintentionally memorize sensitive data (PII) present in input prompts. We benchmark four mitigation strategies—**Differential Privacy, Machine Unlearning, Regularization, and Preference Alignment (DPO)**—evaluating their trade-offs between privacy protection and model utility on both real and synthetic datasets.
 
