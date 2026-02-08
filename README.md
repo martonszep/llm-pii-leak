@@ -44,9 +44,22 @@ src/
 │   └── main_undial.py
 └── utils/         # Helper functions
 ```
+### 🔧 Utility Modules
+
+**`src/utils/`**
+- `TumorClassification.py`: Classes related to the evaluation of the Pathology task using structured outputs.
+
+### 🔁 Machine Unlearning (UnDial)
+
+**`src/undial/`** implements machine unlearning and alternating regularization techniques based on the original UnDial repository:
+
+https://github.com/dong-river/LLM_unlearning/
+
+Most utility code in `undial/utils` is adapted from the original implementation, with additional classes added in `data_utils` to support the structure and format of the datasets used in this project.
+
+For a complete description of supported arguments, configurations, and advanced implementation details, please refer to the original UnDial repository.
 
 - **`notebooks/`**: Contains Jupyter notebooks for dataset creation, result compilation, and visualization (e.g., `gretel_results.ipynb`, `result_compilation.ipynb`).
-
 
 ## 🚀 Installation
 
