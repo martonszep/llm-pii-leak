@@ -44,22 +44,7 @@ src/
 │   └── main_undial.py
 └── utils/         # Helper functions
 ```
-### 🔧 Utility Modules
 
-**`src/utils/`**
-- `TumorClassification.py`: Classes related to the evaluation of the Pathology task using structured outputs.
-
-### 🔁 Machine Unlearning (UnDial)
-
-**`src/undial/`** implements machine unlearning and alternating regularization techniques based on the original UnDial repository:
-
-https://github.com/dong-river/LLM_unlearning/
-
-Most utility code in `undial/utils` is adapted from the original implementation, with additional classes added in `data_utils` to support the structure and format of the datasets used in this project.
-
-For a complete description of supported arguments, configurations, and advanced implementation details, please refer to the original UnDial repository.
-
-- **`notebooks/`**: Contains Jupyter notebooks for dataset creation, result compilation, and visualization (e.g., `gretel_results.ipynb`, `result_compilation.ipynb`).
 
 ## 🚀 Installation
 
@@ -90,32 +75,46 @@ python src/SFT/fine-tune-gretel.py
 ### 2. Privacy-Preserving Methods
 We support multiple mitigation strategies:
 
-*   **Differential Privacy (DP-SGD):**
+-   **Differential Privacy (DP-SGD):**
     ```bash
     python src/DP-FT/dp-Gretel.py
     ```
 
-*   **Direct Preference Optimization (DPO):**
+-   **Direct Preference Optimization (DPO):**
     ```bash
     python src/DPO/dirprefopt.py
     ```
 
-*   **Machine Unlearning:**
+-   **Machine Unlearning:**
     ```bash
     python src/undial/main_undial.py [arguments]
     ```
+    **`src/undial/`** implements machine unlearning and alternating regularization techniques based on the original UnDial repository:
+
+    https://github.com/dong-river/LLM_unlearning/
+
+    Most utility code in `undial/utils` is adapted from the original implementation, with additional classes added in `data_utils` to support the structure and format of the datasets used in this project.
+
+    For a complete description of supported arguments, configurations, and advanced implementation details, please refer to the original UnDial repository.
 
 ### 3. Attacks & Evaluation
-*   **Run PII Extraction Attacks (True Prefix):**
+-   **Run PII Extraction Attacks (True Prefix):**
     ```bash
     python src/Attacks/true-prefix-gretel.py
     ```
 
-*   **Evaluate Model Utility:**
+-   **Evaluate Model Utility:**
     ```bash
     python src/Task-Eval/eval-gretel.py
     ```
 
+### 4. Utility Modules
+
+**`src/utils/`**
+- `TumorClassification.py`: Classes related to the evaluation of the Pathology task using structured outputs.
+
+
+- **`notebooks/`**: Contains Jupyter notebooks for dataset creation, result compilation, and visualization (e.g., `gretel_results.ipynb`, `result_compilation.ipynb`).
 
 ## 📜 Citation
 
